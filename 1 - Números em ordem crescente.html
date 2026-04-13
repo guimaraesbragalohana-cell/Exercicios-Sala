@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 - Números em ordem crescente</title>
+</head>
+<body>
+    <h1>Números em ordem crescente</h1>
+    <label for="inputA">Insira o primeiro número</label>
+    <input type="number" name="inputA" id="inputA">
+    <br><br>
+    <label for="inputB">Insira o segundo número</label>
+    <input type="number" name="inputB" id="inputB">
+    <br><br>
+    <label for="inputC">Insira o terceiro número</label>
+    <input type="number" name="inputC" id="inputC">
+    <br><br>
+    <input type="button" name="calcular" id="calcular" value="Calcular" onclick="calcular()">
+    <br><br>
+    <p>A ordem crescente é igual a: <span id="resultado"></span></p>
+   
+    <script>
+        function calcular() {
+            let n1=parseFloat(document.getElementById("inputA").value);
+            let n2=parseFloat(document.getElementById("inputB").value);
+            let n3=parseFloat(document.getElementById("inputC").value);
+    
+            if (n1<n2 && n2<n3) {document.getElementById("resultado")= n1+", "+n2+", "+n3+"."}
+            else if (n1<n3 && n3<n2) {document.getElementById("resultado")= n1+", "+n3+", "+n2+"."}
+            else if (n2<n1 && n1<n3) {document.getElementById("resultado")= n2+", "+n1+", "+n3+"."}
+            else if (n2<n3 && n3<n1) {document.getElementById("resultado")= n2+", "+n3+", "+n1+"."}
+            else if (n3<n1 && n1<n2) {document.getElementById("resultado")= n3+", "+n1+", "+n2+"."}
+            else if (n3<n2 && n2<n1) {document.getElementById("resultado")= n3+", "+n2+", "+n1+"."}
+
+        }
+</script>
+</body>
+</html>
