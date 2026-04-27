@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Categoria nadador</title>
+</head>
+<body>
+    <h1>Categoria nadador:</h1>
+    <label for="inputA">Insira a idade do nadador:</label>
+    <input type="number" name="inputA" id="inputA">
+    <br><br>
+    <input type="button" name="calcular" id="calcular" value="Calcular" onclick="calcular()">
+    <br><br>
+    <p>Categoria: <span id="resposta"></span></p>
+
+<script>
+function calcular() 
+    {
+    let idade = parseFloat(document.getElementById("inputA").value);
+    let categoria
+    
+    if (idade>=5 && idade<=7) {categoria="InfantilA"}
+    else if (idade>=8 && idade<=10) {categoria="InfantilB"}
+    else if (idade>=11 && idade<=13) {categoria="JuvenilA"}
+    else if (idade>=14 && idade<=17) {categoria="JuvenilB"}
+    else if (idade>=18 && idade<=80) {categoria="Sênior"}
+    else if (idade<5 && idade>=0) {categoria="Jovem demais para competir."}
+    else if (idade>80 && idade<=110) {categoria="Velho demais para competir."}
+    else {categoria="Insira uma idade válida."}
+
+    document.getElementById("resposta").innerHTML = categoria; 
+    }
+</script>
+</body>
+</html>
