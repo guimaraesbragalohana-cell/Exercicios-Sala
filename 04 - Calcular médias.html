@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Calcular médias</title>
+</head>
+<body>
+    <h1>Calcular médias:</h1>
+    <label for="inputA">Insira a primeira nota:</label>
+    <input type="number" name="inputA" id="inputA">
+    <br><br>
+    <label for="inputB">Insira a segunda nota:</label>
+    <input type="number" name="inputB" id="inputB">
+    <br><br>
+    <label for="inputC">Insira a terceira nota:</label>
+    <input type="number" name="inputC" id="inputC">
+    <br><br>
+    <input type="button" name="geométrica" id="geométrica" value="Calcular geométrica" onclick="geométrica(A,B,C)">
+    <br><br>
+    <input type="button" name="ponderada" id="ponderada" value="Calcular ponderada" onclick="ponderada(A,B,C)">
+    <br><br>
+    <input type="button" name="harmônica" id="harmônica" value="Calcular harmônica" onclick="harmônica(A,B,C)">
+    <br><br>
+    <input type="button" name="aritmétrica" id="aritmétrica" value="Calcular aritmétrica" onclick="aritmétrica(A,B,C)">
+    <br><br>
+    <p>Média geométrica: <span id="geométrica"></span></p>
+    <p>Média ponderada: <span id="ponderada"></span></p>
+    <p>Média harmônica: <span id="geométrica"></span></p>
+    <p>Média aritmétrica: <span id="geométrica"></span></p>
+
+<script>
+
+let A = parseFloat(document.getElementById("inputA").value);
+let B = parseFloat(document.getElementById("inputB").value);
+let C = parseFloat(document.getElementById("inputC").value);
+
+function geométrica(A,B,C){
+G = (A*B*C)*0.25
+document.getElementById("geométrica").innerHTML = G;
+return}
+
+function ponderada(A,B,C){
+P = (A+2*B+3*C)/6
+document.getElementById("ponderada").innerHTML = P;
+return}
+
+function harmônica(A,B,C){
+H = 1/((1/A)+(1/B)+(1/C))
+document.getElementById("harmônica").innerHTML = H;
+return}
+
+function aritmétrica(A,B,C){
+Ar = (A+B+C)/3
+document.getElementById("aritmétrica").innerHTML = Ar;
+return}
+
+
+</script>
+</body>
+</html>
