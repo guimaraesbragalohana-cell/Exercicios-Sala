@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Conceitos Alunos</title>
+</head>
+<body>
+    <h1>Conceitos Alunos:</h1>
+    <label for="inputA">Insira a nota:</label>
+    <input type="number" name="inputA" id="inputA">
+    <br><br>
+    <label for="inputB">Insira o número de faltas:</label>
+    <input type="number" name="inputB" id="inputB">
+    <br><br>
+    <input type="button" name="calcular" id="calcular" value="Calcular" onclick="calcular()">
+    <br><br>
+    <p>Conceito: <span id="resposta"></span></p>
+
+<script>
+function calcular () 
+    {
+    let N = parseFloat(document.getElementById("inputA").value);
+    let F = parseFloat(document.getElementById("inputB").value);
+    let C
+
+    //Até 20 faltas//
+    if      (N>=90 && N<=100 && F<=20) {C="A"}
+    else if (N>=75 && N<=89 && F<=20)  {C="B"}
+    else if (N>=50 && N<=74 && F<=20)  {C="C"}
+    else if (N>=40 && N<=49 && F<=20)  {C="D"}
+    else if (N>=0 && N<=39 && F<=20)   {C="E"}
+    //Mais de 20 faltas//
+    else if (N>=90 && N<=100 && F>20) {C="B"}
+    else if (N>=75 && N<=89 && F>20)  {C="C"}
+    else if (N>=50 && N<=74 && F>20)  {C="D"}
+    else if (N>=40 && N<=49 && F>20)  {C="E"}
+    else if (N>=0 && N<=39 && F>20)   {C="F"}
+    //Usuário estúpido//
+    else if (N<0 || N>100 || F<0) {C="Insira dados válidos, usuário estúpido."}
+
+    document.getElementById("resposta").innerHTML=C;
+
+    }
+
+</script> 
+</body>
+</html>

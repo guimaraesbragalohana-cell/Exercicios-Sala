@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Calcular médias</title>
+</head>
+<body>
+    <h1>Calcular médias:</h1>
+    <label for="inputA">Insira a primeira nota:</label>
+    <input type="number" name="inputA" id="inputA">
+    <br><br>
+    <label for="inputB">Insira a segunda nota:</label>
+    <input type="number" name="inputB" id="inputB">
+    <br><br>
+    <label for="inputC">Insira a terceira nota:</label>
+    <input type="number" name="inputC" id="inputC">
+    <br><br>
+    <input type="button" name="geométrica" id="geométrica" value="Calcular geométrica" onclick="GG()">
+    <br><br>
+    <input type="button" name="ponderada" id="ponderada" value="Calcular ponderada" onclick="PP()">
+    <br><br>
+    <input type="button" name="harmônica" id="harmônica" value="Calcular harmônica" onclick="HH()">
+    <br><br>
+    <input type="button" name="aritmétrica" id="aritmétrica" value="Calcular aritmétrica" onclick="AA()">
+    <br><br>
+    <p>Média geométrica: <span id="geo">0</span></p>
+    <p>Média ponderada: <span id="pon">0</span></p>
+    <p>Média harmônica: <span id="har">0</span></p>
+    <p>Média aritmétrica: <span id="ari">0</span></p>
+
+<script>
+
+function GG(){
+let X = parseFloat(document.getElementById("inputA").value);
+let Y = parseFloat(document.getElementById("inputB").value);
+let Z = parseFloat(document.getElementById("inputC").value);
+let G = (X*Y*Z)*0.25
+document.getElementById("geo").innerHTML=G;
+return}
+
+function PP(){
+let X = parseFloat(document.getElementById("inputA").value);
+let Y = parseFloat(document.getElementById("inputB").value);
+let Z = parseFloat(document.getElementById("inputC").value);
+let P = (X+2*Y+3*Z)/6
+document.getElementById("pon").innerHTML=P;
+return}
+
+function HH(){
+let X = parseFloat(document.getElementById("inputA").value);
+let Y = parseFloat(document.getElementById("inputB").value);
+let Z = parseFloat(document.getElementById("inputC").value);
+let H = 1/((1/X)+(1/Y)+(1/Z))
+document.getElementById("har").innerHTML=H;
+return}
+
+function AA(){
+let X = parseFloat(document.getElementById("inputA").value);
+let Y = parseFloat(document.getElementById("inputB").value);
+let Z = parseFloat(document.getElementById("inputC").value);
+let A = (X+Y+Z)/3
+document.getElementById("ari").innerHTML=A;
+return}
+
+
+</script>
+</body>
+</html>
