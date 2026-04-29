@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00 - Modelo</title>
+</head>
+<body>
+    <h1>Modelo:</h1>
+    <label for="inputA">Modelo:</label>
+    <input type="number" name="inputA" id="inputA">
+    <br><br>
+    <input type="button" name="calcular" id="calcular" value="Calcular" onclick="calcular()">
+    <br><br>
+    <p>Resultado: <span id="resposta"></span></p>
+
+<script>
+function calcular() 
+    {
+    let X = parseFloat(document.getElementById("inputA").value);
+    let R
+
+    //Símbolo de ou: || //
+
+    document.getElementById("resposta").innerHTML=R;
+    }
+
+</script>
+</body>
+</html>
